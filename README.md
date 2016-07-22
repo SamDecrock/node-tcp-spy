@@ -25,6 +25,30 @@ httpProxy.start();
 console.log('Now go to http://localhost:9000 to test this out!');
 ```
 
+## Simple example using an object as parameters
+```js
+var tcpspy = require('tcpspy');
+
+var httpProxy = new TCPSpy({
+  sourcePort: 9000,
+  destinationIP: "google.com",
+  destinationPort: 80,
+  debugIdentifier: "HTTP Proxy"
+});
+httpProxy.on('clientData', function (clientData) {
+  console.log('clientData:', clientData);
+});
+httpProxy.on('serverData', function (serverData) {
+  console.log('serverData:', serverData);
+});
+httpProxy.start();
+
+console.log('Now go to http://localhost:9000 to test this out!');
+```
+
+Note: if you leave out the `debugIdentifier`, no debugging info will be displayed.
+
+
 
 ## Fancy example with colors
 ```js
