@@ -1,7 +1,7 @@
 {
-  "name": "tcp-spy",
+  "name": "tcpspy",
   "description": "TCP Spy is a simple node.js library to intercept raw TCP connections. Mostly used to reverse engineer TCP protocols.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "Sam Decrock",
     "url": "https://github.com/SamDecrock/"
